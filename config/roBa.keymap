@@ -86,9 +86,7 @@
 &kp LCTRL         &kp INT_MUHENKAN  &kp INT_HENKAN  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK  &mkp LCLK                             &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>,
-                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         FUNCTION {
