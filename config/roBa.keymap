@@ -66,10 +66,7 @@
 &kp Z      &kp X           &kp C            &kp V      &kp B      &kp DELETE         &kp INTERNATIONAL_4  &kp N      &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
 &kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                             &mo 1
             >;
-
             sensor-bindings = <&scroll_up_down>;
-
-
         };
 
         FUNCTION {
@@ -79,7 +76,6 @@
 &kp LA(ENTER)  &trans    &kp SQT    &kp DOUBLE_QUOTES  &kp DOWN      &kp DELETE         &kp KP_N0            &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                &kp EXCLAMATION
 &kp LEFT_GUI   &mkp MB4  &mkp MB5   &kp SPACE          &kp ENTER     &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                                &trans
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
