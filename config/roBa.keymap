@@ -70,7 +70,6 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
-            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -81,7 +80,6 @@
 &kp LEFT_GUI   &mkp MB4  &mkp MB5   &kp SPACE          &kp ENTER     &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                                &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
             sensor-bindings = <&scroll_up_down>;
         };
 
