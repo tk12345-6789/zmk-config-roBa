@@ -104,7 +104,7 @@
         FUNCTION {
             bindings = <
 &kp ESCAPE     &kp F2         &kp F5     &kp F7             &kp F8                                                  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp PERCENT    &kp SEMICOLON  &kp COLON  &kp AT_SIGN        &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp UNDERSCORE        &kp QUESTION
+&kp PERCENT    &kp SEMICOLON  &kp COLON  &kp AT_SIGN        &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(MINUS)         &kp QUESTION
 &kp LA(ENTER)  &kp SLASH      &kp SQT    &kp DOUBLE_QUOTES  &kp DOWN_ARROW  &kp DEL            &kp INTERNATIONAL_5  &kp KP_N1        &kp KP_N2        &kp KP_NUMBER_3  &kp KP_N0             &kp EXCLAMATION
 &kp LEFT_GUI   &mkp MB4       &mkp MB5   &kp SPACE          &kp ENTER       &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                                &trans
             >;
