@@ -57,6 +57,15 @@
         };
     };
 
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+    };
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -75,13 +84,6 @@
 
             tap-ms = <20>;
         };
-
-        my_ht_comma_lclk: ht_comma_lclk {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
@@ -89,10 +91,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W           &kp E            &kp R      &kp T                                              &kp Y      &kp U  &kp I  &kp O    &kp P
-&kp A      &kp S           &kp D            &kp F      &kp G      &kp LG(D)          &kp INTERNATIONAL_4  &kp H      &kp J  &kp K  &kp L    &kp MINUS
-&kp Z      &kp X           &kp C            &kp V      &kp B      &kp DEL            &kp INTERNATIONAL_5  &kp N      &kp M  &kp B  &kp DOT  &kp LEFT_SHIFT
-&kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                         &mo 1
+&kp Q      &kp W           &kp E            &kp R      &kp T                                              &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S           &kp D            &kp F      &kp G      &kp LG(D)          &kp INTERNATIONAL_4  &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X           &kp C            &kp V      &kp B      &kp DEL            &kp INTERNATIONAL_5  &kp N      &kp M  &kp COMMA  &kp DOT  &kp LEFT_SHIFT
+&kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                             &mo 1
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -102,7 +104,7 @@
         FUNCTION {
             bindings = <
 &kp ESCAPE     &kp F2         &kp F5      &kp F7            &kp F8                                                  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp LS(N8)  &kp LEFT_PARENTHESIS
-&kp PERCENT    &kp SEMICOLON  &kp SQT     &kp LEFT_BRACKET  &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp A       &kp QUESTION
+&kp PERCENT    &kp SEMICOLON  &kp SQT     &kp LEFT_BRACKET  &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PIPE    &kp QUESTION
 &kp LA(ENTER)  &kp SLASH      &kp LS(N7)  &kp LS(NUMBER_2)  &kp DOWN_ARROW  &kp DEL            &kp INTERNATIONAL_5  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0   &kp EXCLAMATION
 &kp LEFT_GUI   &mkp MB4       &mkp MB5    &kp SPACE         &kp ENTER       &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                      &trans
             >;
