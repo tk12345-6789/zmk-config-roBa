@@ -28,7 +28,43 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+        };
+
+        shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
+
+        muhennkann {
+            bindings = <&to_layer_0 INT_MUHENKAN>;
+            key-positions = <11 10>;
+        };
+
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <24 25>;
+        };
+    };
+
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -67,10 +103,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESCAPE     &kp F2         &kp F5      &kp F7            &kp F8                                                  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp LS(N8)          &kp LEFT_PARENTHESIS
-&kp PERCENT    &kp SEMICOLON  &kp SQT     &kp LEFT_BRACKET  &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(UNDERSCORE)  &kp QUESTION
-&kp LA(ENTER)  &kp SLASH      &kp LS(N7)  &kp LS(NUMBER_2)  &kp DOWN_ARROW  &kp DEL            &kp INTERNATIONAL_5  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0           &kp EXCLAMATION
-&kp LEFT_GUI   &mkp MB4       &mkp MB5    &kp SPACE         &kp ENTER       &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                              &trans
+&kp ESCAPE     &kp F2         &kp F5     &kp F7             &kp F8                                                  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp PERCENT    &kp SEMICOLON  &kp COLON  &kp AT_SIGN        &kp UP_ARROW    &kp LG(D)          &kp INTERNATIONAL_4  &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp UNDERSCORE        &kp QUESTION
+&kp LA(ENTER)  &kp SLASH      &kp SQT    &kp DOUBLE_QUOTES  &kp DOWN_ARROW  &kp DEL            &kp INTERNATIONAL_5  &kp KP_N1        &kp KP_N2        &kp KP_NUMBER_3  &kp KP_N0             &kp EXCLAMATION
+&kp LEFT_GUI   &mkp MB4       &mkp MB5   &kp SPACE          &kp ENTER       &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                                &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
