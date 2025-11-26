@@ -84,8 +84,6 @@
 &td_zz     &kp X           &td_cc           &td_vp     &kp B      &kp DEL            &kp INTERNATIONAL_5  &kp N      &kp M  &comma_lclick LCLK COMMA  &kp DOT  &kp LEFT_SHIFT
 &kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                            &mo 1
             >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
