@@ -53,9 +53,9 @@
             tapping-term-ms = <300>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
-        td_vp: tap_dance_zz {
+        td_zz: tap_dance_zz {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_VP";
+            label = "TAP_DANCE_ZZ";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp Z>, <&kp LC(Z)>;
