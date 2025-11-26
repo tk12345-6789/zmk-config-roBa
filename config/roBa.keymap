@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
 
 &mt {
     flavor = "balanced";
@@ -39,13 +39,32 @@
             flavor = "tap-preferred";
             bindings = <&mkp>, <&kp>;
         };
-
+        td_cc: tap_dance_cc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CC";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp C>, <&kp LC(C)>;
+        };
+        td_vp: tap_dance_vp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_VP";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp V>, <&kp LC(V)>;
+        };
+        td_vp: tap_dance_zz {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_VP";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
+        };
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <20>;
         };
     };
