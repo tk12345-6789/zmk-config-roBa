@@ -70,7 +70,7 @@
 &kp LCTRL         &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                            &mo 1
             >;
 
-            left-sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         FUNCTION {
@@ -81,7 +81,7 @@
 &kp LEFT_GUI              &mkp MB4       &mkp MB5    &kp SPACE         &kp ENTER       &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                                          &trans
             >;
 
-            left-sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
