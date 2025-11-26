@@ -51,14 +51,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_C_COPY";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
         td_v_paste: tap_dance_v_paste {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_V_PASTE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
     };
@@ -73,7 +73,6 @@
 &kp LCTRL         &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                            &mo 1
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
