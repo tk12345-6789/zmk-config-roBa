@@ -11,8 +11,8 @@
 
 &trackball {
     automouse-layer = <4>;
-    // scroll-layers = <5>;
 
+    // scroll-layers = <5>;
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -39,6 +39,7 @@
             flavor = "tap-preferred";
             bindings = <&mkp>, <&kp>;
         };
+
         td_cc: tap_dance_cc {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CC";
@@ -46,6 +47,7 @@
             tapping-term-ms = <300>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
+
         td_vp: tap_dance_vp {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_VP";
@@ -53,6 +55,7 @@
             tapping-term-ms = <300>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
+
         td_zz: tap_dance_zz {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_ZZ";
@@ -60,11 +63,13 @@
             tapping-term-ms = <300>;
             bindings = <&kp Z>, <&kp LC(Z)>;
         };
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -74,10 +79,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp E            &kp R      &kp T                                              &kp Y      &kp U  &kp I                     &kp O    &kp P
-&kp A             &kp S           &kp D            &kp F      &kp G      &kp LG(D)          &kp INTERNATIONAL_4  &kp H      &kp J  &kp K                     &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X           &kp C            &kp V      &kp B      &kp DEL            &kp INTERNATIONAL_5  &kp N      &kp M  &comma_lclick LCLK COMMA  &kp DOT  &kp LEFT_SHIFT
-&kp LCTRL         &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                            &mo 1
+&kp Q      &kp W           &kp E            &kp R      &kp T                                              &kp Y      &kp U  &kp I                     &kp O    &kp P
+&kp A      &kp S           &kp D            &kp F      &kp G      &kp LG(D)          &kp INTERNATIONAL_4  &kp H      &kp J  &kp K                     &kp L    &kp MINUS
+&td_zz     &kp X           &td_cc           &td_vp     &kp B      &kp DEL            &kp INTERNATIONAL_5  &kp N      &kp M  &comma_lclick LCLK COMMA  &kp DOT  &kp LEFT_SHIFT
+&kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE      &mkp RCLK            &mkp LCLK                                            &mo 1
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
