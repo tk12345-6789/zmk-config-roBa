@@ -43,14 +43,14 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
-        td_c_copy: tap_dance_cc {
+        td_cc: tap_dance_cc {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CC";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
-        td_v_paste: tap_dance_vp {
+        td_vp: tap_dance_vp {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_VP";
             #binding-cells = <0>;
