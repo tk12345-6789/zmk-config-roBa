@@ -19,9 +19,9 @@
              <&kp LEFT_ARROW>,
              <&kp UP_ARROW>,
              <&kp DOWN_ARROW>;
-         tick = <50>;
-         wait-ms = <20>;
-         tap-ms = <20>;
+         tick = <30>;
+         wait-ms = <10>;
+         tap-ms = <10>;
      };
 };
 
