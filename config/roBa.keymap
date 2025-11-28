@@ -79,11 +79,6 @@
             tapping-term-ms = <300>;
             bindings = <&kp A>, <&kp LC(A)>;
         };
-        scroll_toggle: scroll_toggle {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&mwh SCROLL_UP>, <&mwh SCROLL_DOWN>;
-        };
     };
 
     keymap {
