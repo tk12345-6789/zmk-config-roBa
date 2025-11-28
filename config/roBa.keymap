@@ -10,7 +10,7 @@
 };
 
 &trackball {
-    automouse-layer = <4>
+    // automouse-layer = <4>;
     scroll-layers = <5>;
     arrows {
          layers = <3>;
@@ -145,7 +145,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
-            sensor-bindings = <&inc_dec_kp SCROLL_UP SCROLL_DOWN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
         };
 
         layer_6 {
