@@ -82,6 +82,7 @@
             tapping-term-ms = <300>;
             bindings = <&kp A>, <&kp LC(A)>;
         };
+
         td_xx: tap_dance_xx {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_XX";
@@ -108,9 +109,9 @@
         FUNCTION {
             bindings = <
 &kp ESCAPE                &kp F2         &kp F5      &kp F7            &kp F8                                                  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp LS(N8)      &kp LEFT_PARENTHESIS
-&kp PERCENT               &kp SEMICOLON  &kp SQT     &kp LEFT_BRACKET  &kp UP_ARROW    &trans             &kp INTERNATIONAL_4  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(INT_RO)  &kp EXCLAMATION
+&kp TAB                   &kp SEMICOLON  &kp SQT     &kp LEFT_BRACKET  &kp UP_ARROW    &trans             &kp INTERNATIONAL_4  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(INT_RO)  &kp EXCLAMATION
 &mt LEFT_SHIFT LA(ENTER)  &kp SLASH      &kp LS(N7)  &kp LS(NUMBER_2)  &kp DOWN_ARROW  &kp DEL            &kp INTERNATIONAL_5  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0       &kp QUESTION
-&kp LEFT_GUI              &mkp MB4       &mkp MB5    &kp SPACE         &kp ENTER       &kp BACKSPACE      &mkp MB4             &mkp MB5                                                           &trans
+&kp LEFT_GUI              &kp PERCENT    &kp TILDE   &kp SPACE         &kp ENTER       &kp BACKSPACE      &mkp MB4             &mkp MB5                                                           &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
