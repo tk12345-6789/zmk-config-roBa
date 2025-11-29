@@ -82,6 +82,13 @@
             tapping-term-ms = <300>;
             bindings = <&kp A>, <&kp LC(A)>;
         };
+        td_aa: tap_dance_xx {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_XX";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp X>, <&kp LC(X)>;
+        };
     };
 
     keymap {
