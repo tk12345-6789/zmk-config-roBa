@@ -44,6 +44,12 @@
         multiplier = <1>;
         divisor = <3>;
     };
+    trackball_scroll_listener: trackball_scroll_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        layers = <5>;
+        input-processors = <&zip_xy_scaler INPUT_REL_WHEEL INPUT_REL_Y &zip_xy_scaler INPUT_REL_HWHEEL INPUT_REL_X>;
+    };
     behaviors {
         comma_lclick: comma_lclick {
             compatible = "zmk,behavior-hold-tap";
