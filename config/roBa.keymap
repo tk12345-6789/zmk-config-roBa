@@ -162,7 +162,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
-            sensor-bindings = <&encoder_ctrl_scroll>;
         };
 
         layer_6 {
