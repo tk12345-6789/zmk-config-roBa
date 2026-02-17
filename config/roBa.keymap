@@ -30,7 +30,18 @@
 
 / {
     combos { compatible = "zmk,combos"; };
-
+    macros {
+        ctrl_scroll_on: ctrl_scroll_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>,
+                       <&macro_press &mo 5>,
+                       <&macro_pause_for_release>,
+                       <&macro_release &mo 5>,
+                       <&macro_release &kp LCTRL>;
+            label = "CTRL_SCROLL_ON";
+        };
+    };
     behaviors {
         comma_lclick: comma_lclick {
             compatible = "zmk,behavior-hold-tap";
@@ -82,12 +93,13 @@
             tapping-term-ms = <300>;
             bindings = <&kp X>, <&kp LC(X)>;
         };
-        encoder_ctrl_scroll: encoder_ctrl_scroll {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "ENCODER_CTRL_SCROLL";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp LC(MINUS)>, <&kp LC(EQUAL)>;  // Ctrl+ズームアウト、Ctrl+ズームイン
-        tap-ms = <20>;
+        n_s: n_s {
+            compatible = "zmk,behavior-hold-tap";
+            label = "N_S";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&ctrl_scroll_on>, <&kp>;
         };
     };
 
@@ -98,7 +110,7 @@
             bindings = <
 &kp Q      &kp W           &kp E            &kp R      &kp T                                                        &kp Y      &kp U    &kp I                     &kp O         &kp P
 &kp A      &kp S           &kp D            &kp F      &kp G      &kp PRINTSCREEN        &kp INTERNATIONAL_4        &kp H      &kp J    &kp K                     &kp L         &kp MINUS
-&td_zz     &td_xx          &td_cc           &td_vp     &kp B      &mt LG(TAB) LG(D)      &mt ENTER INTERNATIONAL_5  &lt 5 N    &lt 5 M  &comma_lclick LCLK COMMA  &lt 3 PERIOD  &kp LEFT_SHIFT
+&td_zz     &td_xx          &td_cc           &td_vp     &kp B      &mt LG(TAB) LG(D)      &mt ENTER INTERNATIONAL_5  &n_s 0 N   &lt 5 M  &comma_lclick LCLK COMMA  &lt 3 PERIOD  &kp LEFT_SHIFT
 &kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE          &mkp RCLK                  &mkp LCLK                                                   &mo 1
             >;
 
