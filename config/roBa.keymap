@@ -101,6 +101,14 @@
             flavor = "hold-preferred";
             bindings = <&ctrl_scroll_on>, <&kp>;
         };
+        mo1_enter: mo1_enter {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MO1_ENTER";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "hold-preferred";
+        bindings = <&mo>, <&kp>;
+        };
     };
 
     keymap {
@@ -111,7 +119,7 @@
 &kp Q      &kp W           &kp E            &kp R      &kp T                                                        &kp Y      &kp U    &kp I                     &kp O         &kp P
 &kp A      &kp S           &kp D            &kp F      &kp G      &kp PRINTSCREEN        &kp INTERNATIONAL_4        &kp H      &kp J    &kp K                     &kp L         &kp MINUS
 &td_zz     &td_xx          &td_cc           &td_vp     &kp B      &mt LG(TAB) LG(D)      &mt ENTER INTERNATIONAL_5  &n_s 0 N   &lt 5 M  &comma_lclick LCLK COMMA  &lt 3 PERIOD  &kp LEFT_SHIFT
-&kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE          &mkp RCLK                  &mkp LCLK                                                   &mo 1
+&kp LCTRL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SPACE  &kp ENTER  &kp BACKSPACE          &mkp RCLK                  &mkp LCLK                                                   &mo1_enter 1 ENTER
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
