@@ -95,15 +95,6 @@
             bindings = <&kp X>, <&kp LC(X)>;
         };
 
-        n_s: n_s {
-            compatible = "zmk,behavior-hold-tap";
-            label = "N_S";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&ctrl_scroll_on>, <&kp>;
-        };
-
         mo1_enter: mo1_enter {
             compatible = "zmk,behavior-hold-tap";
             label = "MO1_ENTER";
